@@ -1,0 +1,159 @@
+/* static/css/style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f092; /* Fundo amarelo (243, 240, 146) */
+    color: #333;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Tela de Menu --- */
+#menu-screen {
+    background-color: #00ffff; /* Fundo ciano */
+}
+
+#logo {
+    width: 70%;
+    max-width: 900px;
+    margin-bottom: 20px;
+}
+
+.menu-button {
+    padding: 15px 30px;
+    font-size: 24px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #eee;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+/* --- Tela de Jogo --- */
+#game-screen {
+    justify-content: space-between;
+}
+
+#hud {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#player1-info, #player2-info {
+    flex: 1;
+}
+#player2-info {
+    text-align: right;
+}
+#round-info {
+    text-align: center;
+    flex: 0.5;
+}
+#round-number {
+    font-size: 72px;
+    font-weight: bold;
+}
+
+.health-bar {
+    display: flex;
+}
+.health-bar img { /* Imagem do coração */
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+}
+
+#play-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.move-display {
+    width: 300px;
+    height: 200px;
+    border: 5px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    background-color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Imagens das jogadas */
+.move-display.pedra_branco { background-image: url('../images/pedra.png'); }
+.move-display.papel_branco { background-image: url('../images/papel.png'); }
+.move-display.tesoura_branco { background-image: url('../images/tesoura.png'); }
+.move-display.pedra_cinza { background-image: url('../images/pedracinza.png'); }
+.move-display.papel_cinza { background-image: url('../images/papelcinza.png'); }
+.move-display.tesoura_cinza { background-image: url('../images/tesouracinza.png'); }
+
+
+#vs-text {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+#round-message {
+    font-size: 32px;
+    color: blue;
+    height: 50px;
+    font-weight: bold;
+}
+
+/* --- Controles do Jogador --- */
+#player1-controls, #player2-controls {
+    display: flex;
+    width: 45%;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.card-hand {
+    display: flex;
+    gap: 10px;
+}
+
+.card {
+    width: 100px;
+    height: 140px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+    background-size: cover;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: scale(1.1);
+}
+
+/* Imagens das cartas (você precisa adicionar todas) */
+.card.jogada_hacker { background-image: url('../images/jogada_hacker.png'); }
+.card.oitava_vida { background-image: url('../images/oitava_vida.png'); }
+.card.miaudicao { background-image: url('../images/miaudicao.png'); }
+.card.garra_feroz { background-image: url('../images/garra_feroz.png'); }
+.card.roubo_felino { background-image: url('../images/roubo_felino.png'); }
+.card.arranhao_sorte { background-image: url('../images/arranhao_sorte.png'); }
+
+.move-options {
+    font-size: 20px;
+}

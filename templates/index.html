@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIAUPOWWWWW</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div id="menu-screen" class="screen">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo MiauPow" id="logo">
+        <button id="play-local-btn" class="menu-button">Jogar Local</button>
+        <button id="play-cpu-btn" class="menu-button">Jogar contra CPU</button>
+        <button id="exit-btn" class="menu-button">Sair</button>
+    </div>
+
+    <div id="game-screen" class="screen" style="display: none;">
+        <div id="hud">
+            <div id="player1-info">
+                <h2>Jogador 1</h2>
+                <div id="player1-health" class="health-bar">
+                    </div>
+            </div>
+            <div id="round-info">
+                <span id="round-text">Partida</span>
+                <span id="round-number">1</span>
+            </div>
+            <div id="player2-info">
+                <h2>Jogador 2</h2>
+                <div id="player2-health" class="health-bar">
+                    </div>
+            </div>
+        </div>
+
+        <div id="play-area">
+            <div id="player1-move" class="move-display">?</div>
+            <span id="vs-text">VS</span>
+            <div id="player2-move" class="move-display">?</div>
+        </div>
+
+        <div id="round-message"></div>
+
+        <div id="player1-controls">
+            <div id="player1-cards" class="card-hand">
+                </div>
+            <div class="move-options">
+                <span>(S) Pedra</span>
+                <span>(D) Papel</span>
+                <span>(A) Tesoura</span>
+            </div>
+        </div>
+
+        <div id="player2-controls">
+            <div id="player2-cards" class="card-hand">
+                </div>
+            <div class="move-options">
+                <span>(J) Tesoura</span>
+                <span>(K) Pedra</span>
+                <span>(L) Papel</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="end-screen" class="screen" style="display: none;">
+        <h1 id="winner-text"></h1>
+        <button id="revanche-btn">Revanche</button>
+        <button id="sair-final-btn">Sair</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html>
